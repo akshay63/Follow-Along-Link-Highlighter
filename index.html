@@ -47,32 +47,5 @@
         <a href="">repudiandae</a> quas!
       </p>
     </div>
-
-    <div id="paypal-button-container-P-5S531548020412419MSNTROA"></div>
-    <script
-      src="https://www.paypal.com/sdk/js?client-id=sb&vault=true&intent=subscription"
-      data-sdk-integration-source="button-factory"
-    ></script>
-    <script>
-      paypal
-        .Buttons({
-          style: {
-            shape: "pill",
-            color: "blue",
-            layout: "vertical",
-            label: "subscribe",
-          },
-          createSubscription: function (data, actions) {
-            return actions.subscription.create({
-              /* Creates the subscription */
-              plan_id: "P-5S531548020412419MSNTROA",
-            });
-          },
-          onApprove: function (data, actions) {
-            alert(data.subscriptionID); // You can add optional success message for the subscriber here
-          },
-        })
-        .render("#paypal-button-container-P-5S531548020412419MSNTROA"); // Renders the PayPal button
-    </script>
   </body>
 </html>
